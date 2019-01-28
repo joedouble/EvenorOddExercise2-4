@@ -5,29 +5,34 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        //Excercise 2.4
-        Scanner number = new Scanner(System.in);
+        //Exercise 2.4
 
-        System.out.println("Please enter a number. ");
-        double userNumber = number.nextInt();
+        double userNumber = 0;
+        double userChoice = 0;
 
+        boolean userContinue = false;
+
+        Scanner myScanner = new Scanner(System.in);
+        
         do {
+            System.out.println("Please enter a number. ");
+            userNumber = myScanner.nextInt();
+
             if (userNumber % 2 == 0) {
                 System.out.println("The number you entered is even.");
             } else {
                 System.out.println("The number you entered is odd.");
             }
-            int num2;
-            boolean response = true;
+            System.out.println("\nWould you like to enter another number?  Please enter 1 for YES and 2 for NO.");
+            userChoice = myScanner.nextInt();
 
+            if (userChoice == 1) {
+                userContinue = true;
+            } else {
+                userContinue = false;
+            }
 
-
+        } while (userContinue);
     }
 }
 
-do {would you like another?
-
-        System.out.println("Would you like to enter another number?  (Enter Y or N)")
-        boolean answer = true;
-    if response = yes
-                then response = true
